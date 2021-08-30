@@ -2,15 +2,14 @@ import { Component } from "react";
 
 class Input extends Component {
   render() {
-    console.log(this.props);
-
     return (
-      <div id="input">
+      <div className="Input">
         <input
           type={this.props.type}
           placeholder={this.props.placeholder}
           value={this.props.value}
-          onChange={(e) => this.props.handleInputChange(e)}
+          data-stateprefix={this.props.stateprefix}
+          data-statename={this.props.statename}
         />
       </div>
     );

@@ -10,3 +10,21 @@
   font-family: sans-serif;
   padding: 1rem;
 }
+
+#CvCreator {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#CvCreator > div {
+  margin: 1rem;
+}
+
+#CvCreator:first-child {
+  margin-left: 2rem;
+}
+
+#CvCreator:last-child {
+  margin-right: 2rem;
+}

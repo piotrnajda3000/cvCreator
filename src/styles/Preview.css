@@ -1,0 +1,53 @@
+#Preview {
+  background-color: white;
+  min-width: 210mm;
+  min-height: 297mm;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#GeneralPreview {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#GeneralPreview h2 {
+  margin: 0;
+}
+
+#GeneralPreview div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact h2 {
+  font-weight: 400;
+}
+
+.SectionPreview h2 {
+  font-weight: 400;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.SectionItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SectionItem p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.ItemLeft {
+  padding: 1rem;
+}
+
+.ItemRight {
+  padding: 1rem;
+}

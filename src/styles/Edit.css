@@ -1,0 +1,57 @@
+#Edit {
+  background-color: white;
+  padding-inline: 1rem;
+  height: fit-content;
+  padding-bottom: 2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  flex: 2;
+  max-width: 210mm;
+}
+
+.Section {
+  display: flex;
+  flex-direction: column;
+}
+
+.Section:last-of-type {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Section h2,
+h3 {
+  font-weight: 400;
+}
+
+.Input {
+  margin-bottom: 8px;
+}
+
+.Input input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  height: 32px;
+  padding-left: 8px;
+  outline: none;
+}
+
+.EditSectionItem:not(:last-of-type) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.EditSectionItem:not(:first-of-type) {
+  padding-top: 1rem;
+}
+
+button {
+  width: 100%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.deleteButton {
+  background: hsl(0, 0%, 86%);
+}

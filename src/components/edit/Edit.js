@@ -1,53 +1,28 @@
 import { Component } from "react";
 import General from "./General";
 import Section from "./Section";
-
-import "../../styles/edit/Edit.css";
+import "../../styles/Edit.css";
 
 class Edit extends Component {
   render() {
-    const inputData = this.props.inputData;
-
-    const general = {
-      name: {
-        first: inputData.firstName,
-        last: inputData.lastName,
-      },
-      contact: {
-        phone: inputData.phone,
-        email: inputData.email,
-      },
-    };
-
-    const education = {
-      where: inputData.eduWhere,
-      title: inputData.eduTitle,
-      from: inputData.eduFrom,
-      to: inputData.eduTo,
-    };
-
-    const experience = {
-      where: inputData.expWhere,
-      title: inputData.expTitle,
-      from: inputData.expFrom,
-      to: inputData.expTo,
-    };
-
     return (
       <div id="Edit">
-        <General inputData={general} onInputChange={this.props.onInputChange} />
+        <General data={this.props.cv} />
         <Section
           header="Education"
           place="School"
-          placeAttr="Degree"
-          inputData={education}
+          title="Degree"
+          prefix="edu"
+          items={this.props.cv.education}
+          inputData={this.props.inputData.education}
         />
-        <Section
+        {/* <Section
           header="Experience"
           place="Company"
-          placeAttr="Position"
-          inputData={experience}
-        />
+          title="Position"
+          items={this.props.cv.experience}
+        /> */}
+        <button onClick={this.props.loadSampleCv}>Load sample CV</button>
       </div>
     );
   }

@@ -4,7 +4,6 @@ import CvCreator from "./components/CvCreator";
 import "normalize.css";
 import "./styles/index.css";
 
-// Data model
 const DEFAULT_CV = {
   general: {
     name: {
@@ -18,20 +17,16 @@ const DEFAULT_CV = {
   },
   education: [
     {
-      place: {
-        where: "Example School",
-        title: "Engineer",
-      },
+      where: "Example School",
+      title: "Engineer",
       date: {
         from: "2015",
         to: "2018",
       },
     },
     {
-      place: {
-        where: "Example School",
-        title: "Masters in UX/UI",
-      },
+      where: "Example School",
+      title: "Masters in UX/UI",
       date: {
         from: "2018",
         to: "2020",
@@ -40,20 +35,16 @@ const DEFAULT_CV = {
   ],
   experience: [
     {
-      place: {
-        where: "Spotify",
-        title: "Play button magician",
-      },
+      where: "Spotify",
+      title: "Play button magician",
       date: {
         from: "2021",
         to: "2026",
       },
     },
     {
-      place: {
-        where: "Twitter",
-        title: "Bird feeder",
-      },
+      where: "Twitter",
+      title: "Bird feeder",
       date: {
         from: "2026",
         to: "2032",
@@ -64,7 +55,7 @@ const DEFAULT_CV = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <CvCreator cv={DEFAULT_CV} />
+    <CvCreator defaultCv={DEFAULT_CV} />
   </React.StrictMode>,
   document.getElementById("root")
 );

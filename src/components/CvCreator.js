@@ -1,81 +1,98 @@
-import "../styles/CvCreator.css";
 import React, { Component } from "react";
 
 import Edit from "./edit/Edit";
 import Preview from "./preview/Preview";
 
+import uniqid from "uniqid";
+
 class CvCreator extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
+    this.clearState = {
+      // General
+      generalNameFirst: "",
+      generalNameLast: "",
+      generalContactPhone: "",
+      generalContactEmail: "",
+      // Education
+      // Inputs
       eduWhere: "",
       eduTitle: "",
-      eduFrom: "",
-      eduTo: "",
+      eduDateFrom: "",
+      eduDateTo: "",
+      // List of items
+      education: [],
+      // Item
+      eduItem: { id: uniqid() },
+      // Experience
+      experience: [],
       expWhere: "",
       expTitle: "",
-      expFrom: "",
-      expTo: "",
-      experience: [
-        {
-          where: "",
-          title: "",
-          date: {
-            from: "",
-            to: "",
-          },
-        },
-      ],
-      education: [
-        {
-          where: "",
-          title: "",
-          date: {
-            from: "",
-            to: "",
-          },
-        },
-        {
-          where: "a",
-          title: "b",
-          date: {
-            from: "c",
-            to: "d",
-          },
-        },
-      ],
+      expDateFrom: "",
+      expDateTo: "",
+    };
+
+    this.state = {
+      ...this.clearState,
     };
   }
 
-  handleInputChange = (event) => {
-    console.log(event.target);
-    console.log(event.target.value);
+  loadSampleCv = () => {
+    const defaultCv = this.props.defaultCv;
+    const education = defaultCv.education;
+    const experience = defaultCv.experience;
+    const general = defaultCv.general;
+    this.setState({
+      generalNameFirst: general.name.first,
+      generalNameLast: general.name.last,
+      generalContactPhone: general.contact.phone,
+      generalContactEmail: general.contact.email,
+      education,
+      experience,
+    });
+  };
+
+  resetCv = () => {
+    this.state = {
+      ...this.clearState,
+    };
   };
 
   render() {
+    // Reconstructing the data model from the state
     const cv = {
       general: {
         name: {
-          first: this.state.firstName,
-          last: this.state.lastName,
+          first: this.state.generalNameFirst,
+          last: this.state.generalNameLast,
         },
         contact: {
-          email: this.state.email,
-          phone: this.state.phone,
+          email: this.state.generalContactEmail,
+          phone: this.state.generalContactPhone,
         },
       },
       education: this.state.education,
       experience: this.state.experience,
     };
 
+    const inputData = {
+      education: {
+        where: this.state.eduWhere,
+        title: this.state.eduTitle,
+        from: this.state.eduDateFrom,
+        to: this.state.eduDateTo,
+      },
+    };
+
     return (
       <div id="CvCreator">
-        <Edit inputData={this.state} onInputChange={this.handleInputChange} />
+        <Edit
+          cv={cv}
+          inputData={inputData}
+          loadSampleCv={this.loadSampleCv}
+          resetCv={this.resetCv}
+        />
         <Preview cv={cv} />
       </div>
     );
