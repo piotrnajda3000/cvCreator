@@ -1,0 +1,24 @@
+.SectionPreview h2 {
+  font-weight: 400;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.SectionItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SectionItem p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.ItemLeft {
+  padding: 1rem;
+}
+
+.ItemRight {
+  padding: 1rem;
+}

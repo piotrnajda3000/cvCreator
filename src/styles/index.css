@@ -1,0 +1,12 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  background: #e5e5e5;
+  font-family: sans-serif;
+  padding: 1rem;
+}
