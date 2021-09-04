@@ -30,8 +30,16 @@
 .SectionPreview h2 {
   font-weight: 400;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  margin: 0;
+  padding-block: 1rem;
+}
+
+#GeneralPreview + .SectionPreview {
+  padding-top: 3rem;
+}
+
+.SectionPreview {
+  margin-bottom: 1rem;
 }
 
 .SectionItem {

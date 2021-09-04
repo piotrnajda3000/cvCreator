@@ -6,10 +6,13 @@ class Input extends Component {
       <div className="Input">
         <input
           type={this.props.type}
-          placeholder={this.props.placeholder}
+          name={this.props.name}
           value={this.props.value}
-          data-stateprefix={this.props.stateprefix}
-          data-statename={this.props.statename}
+          placeholder={this.props.placeholder}
+          data-section={this.props.section}
+          data-itemprop={this.props.itemprop}
+          data-itemid={this.props.itemId}
+          onChange={(e) => this.props.onChange(e)}
         />
       </div>
     );

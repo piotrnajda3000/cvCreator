@@ -8,10 +8,10 @@ class Preview extends Component {
     return (
       <div id="Preview">
         <GeneralPreview
-          firstName={this.props.cv.general.name.first}
-          lastName={this.props.cv.general.name.last}
-          email={this.props.cv.general.contact.email}
-          phone={this.props.cv.general.contact.phone}
+          firstName={this.props.cv.general.first}
+          lastName={this.props.cv.general.last}
+          email={this.props.cv.general.email}
+          phone={this.props.cv.general.phone}
         />
         <SectionPreview header="Education" items={this.props.cv.education} />
         <SectionPreview header="Experience" items={this.props.cv.experience} />

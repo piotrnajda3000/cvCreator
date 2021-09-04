@@ -2,19 +2,21 @@ import React, { Component } from "react";
 
 class SectionPreview extends Component {
   render() {
-    if (this.props.items.length > 0) {
-      const itemRows = [];
-      this.props.items.forEach((item, idx) => {
+    const itemRows = [];
+    this.props.items.forEach((item, idx) => {
+      if (item.where || item.title || item.from || item.to) {
         itemRows.push(
           <SectionItem
             where={item.where}
             title={item.title}
-            from={item.date.from}
-            to={item.date.to}
+            from={item.from ? item.from : ""}
+            to={item.to ? item.to : ""}
             key={idx}
           />
         );
-      });
+      }
+    });
+    if (itemRows.length > 0) {
       return (
         <div className="SectionPreview">
           <h2>{this.props.header}</h2>
@@ -28,6 +30,13 @@ class SectionPreview extends Component {
 }
 
 function SectionItem({ where, title, from, to }) {
+  let date;
+  if (from || to) {
+    date = `${from} - ${to}`;
+  } else {
+    date = "";
+  }
+
   return (
     <div className="SectionItem">
       <div className="ItemLeft">
@@ -35,9 +44,7 @@ function SectionItem({ where, title, from, to }) {
         <p>{title}</p>
       </div>
       <div className="ItemRight">
-        <p>
-          {from} - {to}
-        </p>
+        <p>{date}</p>
       </div>
     </div>
   );

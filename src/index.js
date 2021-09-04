@@ -3,52 +3,45 @@ import ReactDOM from "react-dom";
 import CvCreator from "./components/CvCreator";
 import "normalize.css";
 import "./styles/index.css";
+import uniqid from "uniqid";
 
 const DEFAULT_CV = {
   general: {
-    name: {
-      first: "John",
-      last: "Doe",
-    },
-    contact: {
-      email: "johndoe@gmail.com",
-      phone: "+48111111111",
-    },
+    first: "John",
+    last: "Doe",
+    email: "johndoe@gmail.com",
+    phone: "+48777777777",
   },
   education: [
     {
       where: "Example School",
       title: "Engineer",
-      date: {
-        from: "2015",
-        to: "2018",
-      },
+      from: "2015",
+      to: "2018",
+      id: uniqid(),
     },
     {
       where: "Example School",
       title: "Masters in UX/UI",
-      date: {
-        from: "2018",
-        to: "2020",
-      },
+      from: "2018",
+      to: "2020",
+      id: uniqid(),
     },
   ],
   experience: [
     {
       where: "Spotify",
       title: "Play button magician",
-      date: {
-        from: "2021",
-        to: "2026",
-      },
+      from: "2021",
+      to: "2026",
+      id: uniqid(),
     },
     {
       where: "Twitter",
       title: "Bird feeder",
-      date: {
-        from: "2026",
-        to: "2032",
-      },
+      from: "2026",
+      to: "2032",
+      id: uniqid(),
     },
   ],
 };

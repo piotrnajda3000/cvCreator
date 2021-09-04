@@ -2,7 +2,7 @@
   background-color: white;
   padding-inline: 1rem;
   height: fit-content;
-  padding-bottom: 2rem;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex: 2;
   max-width: 210mm;
@@ -49,9 +49,38 @@ button {
   width: 100%;
   border-radius: 7px;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  color: rgba(0, 0, 0, 0.75);
+  height: 32px;
+}
+
+button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.addButton {
+  margin-top: 8px;
 }
 
 .deleteButton {
   background: hsl(0, 0%, 86%);
+  margin-top: 8px;
+}
+
+.Section ~ button:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+#loadCv {
+  background: #abb7ce;
+}
+
+#resetCv {
+  background: #b98898;
+}
+
+.Section ~ button:last-of-type {
+  margin-bottom: 19px;
 }
