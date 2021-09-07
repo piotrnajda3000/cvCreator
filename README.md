@@ -1,1 +1,1 @@
-# [Live Link](https://piotrnajda3000.github.io/cvCreator/)
+# [Live Link](https://piotrnajda3000.github.io/cv-creator/)
