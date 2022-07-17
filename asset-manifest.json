@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/cvCreator/static/js/main.2b55b819.js",
+    "main.js": "/cvCreator/static/js/main.af25ca47.js",
     "index.html": "/cvCreator/index.html",
-    "main.2b55b819.js.map": "/cvCreator/static/js/main.2b55b819.js.map"
+    "main.af25ca47.js.map": "/cvCreator/static/js/main.af25ca47.js.map"
   },
   "entrypoints": [
-    "static/js/main.2b55b819.js"
+    "static/js/main.af25ca47.js"
   ]
 }
