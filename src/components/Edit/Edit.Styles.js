@@ -37,9 +37,7 @@ export const EditSection = styled.div`
   .cvControlButtons {
     ${verticalItem(1)}
   }
-  position: sticky;
   height: fit-content;
-  top: 16px;
 `;
 
 export const Button = styled.button`
